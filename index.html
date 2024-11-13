@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo/Name -->
+                <div class="flex items-center space-x-2">
+                    <div class="text-2xl font-bold text-indigo-600">AP</div>
+                    <div class="hidden sm:block text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                        Archana Patel
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" 
+                       class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-indigo-600 after:transition-all after:duration-300">
+                        Home
+                    </a>
+                    <a href="#about" 
+                       class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-indigo-600 after:transition-all after:duration-300">
+                        About
+                    </a>
+                    <a href="#education" 
+                       class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-indigo-600 after:transition-all after:duration-300">
+                        Education
+                    </a>
+                    <a href="#profiles" 
+                       class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-indigo-600 after:transition-all after:duration-300">
+                        Coding Profiles
+                    </a>
+                    <a href="#projects" 
+                       class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-indigo-600 after:transition-all after:duration-300">
+                        Projects
+                    </a>
+                    <a href="#certifications" 
+                       class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-indigo-600 after:transition-all after:duration-300">
+                        Certifications
+                    </a>
+                    <a href="#experience" 
+                       class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-indigo-600 after:transition-all after:duration-300">
+                        Experience
+                    </a>
+                    <a href="#contact" 
+                       class="px-4 py-2 text-white bg-indigo-600 rounded-full hover:bg-indigo-700 transition-colors duration-300">
+                        Contact Me
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 hover:text-indigo-600 transition-colors duration-300" 
+                        id="mobile-menu-button"
+                        aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path class="close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 pb-4">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">About</a>
+                    <a href="#education" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Education</a>
+                    <a href="#profiles" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Coding Profiles</a>
+                    <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Projects</a>
+                    <a href="#certifications" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Certifications</a>
+                    <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Experience</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern min-h-screen relative overflow-hidden">
+        <!-- Existing background pattern/gradient -->
+        
+        <!-- Content Container -->
+        <div class="container mx-auto px-6 h-screen flex items-center relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+                <!-- Left Content -->
+                <div class="text-white space-y-8 text-center lg:text-left">
+                    <div class="space-y-4">
+                        <p class="text-indigo-200 uppercase tracking-wider font-medium">Welcome to my portfolio</p>
+                        <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+                            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-300" id="typed-text"></span>
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl text-indigo-100 font-light">
+                            Full Stack Developer | Machine Learning Enthusiast
+                        </h2>
+                    </div>
+
+                    <p class="text-lg text-indigo-100 max-w-xl">
+                        I specialize in developing modern web applications with clean, efficient code and optimizing user experiences. As I expand my expertise in machine learning, I'm focused on integrating intelligent, data-driven solutions into my full-stack projects.                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#projects" 
+                           class="px-8 py-3 bg-white text-indigo-600 rounded-full font-medium hover:bg-indigo-50 transition-colors duration-300 flex items-center gap-2">
+                            View My Work
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" 
+                           class="px-8 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-indigo-600 transition-colors duration-300">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-6 justify-center lg:justify-start">
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/archana-patel-a9732523b" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="text-indigo-200 hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <!-- GitHub -->
+                        <a href="https://github.com/2016archana" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="text-indigo-200 hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content - Code Window -->
+                <div class="hidden lg:block relative">
+                    <div class="relative w-full h-[500px]">
+                        <div class="code-window bg-gray-900 rounded-lg p-4 shadow-xl">
+                            <div class="flex gap-2 mb-3">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="space-y-2 font-mono text-sm">
+                                <div class="text-green-400">const developer = {</div>
+                                <div class="text-blue-400 ml-4">name: <span class="text-orange-400">'Archana Patel'</span>,</div>
+                                <div class="text-blue-400 ml-4">role: <span class="text-orange-400">'Full Stack Developer'</span>,</div>
+                                <div class="text-blue-400 ml-4">skills: [<span class="text-orange-400">'React', 'Node.js', 'JavaScript'</span>],</div>
+                                <div class="text-blue-400 ml-4">passion: <span class="text-orange-400">'Building innovative web solutions'</span></div>
+                                <div class="text-green-400">}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-pattern relative py-20 overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Passionate Full Stack Developer crafting innovative web solutions with modern technologies
+                </p>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Left Column - About Info -->
+                <div class="space-y-8">
+                    <div class="bg-white/80 backdrop-blur-lg rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">My Journey</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            With a strong foundation in front-end and back-end development, I bring ideas to life through clean, efficient code and intuitive user experiences. Now expanding into machine learning, I combine technical expertise with creative problem-solving to build impactful, data-driven digital solutions.
+                        </p>
+                    </div>
+
+                    <!-- Key Focus Areas -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="text-indigo-600 mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Frontend</h4>
+                            <p class="text-gray-600">Creating responsive and intuitive user interfaces with modern frameworks</p>
+                        </div>
+
+                        <div class="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="text-indigo-600 mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Backend</h4>
+                            <p class="text-gray-600">Building robust and scalable server-side applications</p>
+                        </div>
+                    </div>
+
+                    <!-- New Achievements Section -->
+                    <div class="bg-white/80 backdrop-blur-lg rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="p-3 bg-indigo-100 rounded-lg mr-4">
+                                <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Achievements</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-all duration-300">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-indigo-600">🏆</div>
+                                    <div>
+                                        <h4 class="font-semibold text-indigo-600">Hackathon Winner</h4>
+                                        <p class="text-gray-600 text-sm">First place in National Coding Championship 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-all duration-300">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-indigo-600">📜</div>
+                                    <div>
+                                        <h4 class="font-semibold text-indigo-600">Certifications</h4>
+                                        <p class="text-gray-600 text-sm">AWS Certified Developer & Google Cloud Professional</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-all duration-300">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-indigo-600">💡</div>
+                                    <div>
+                                        <h4 class="font-semibold text-indigo-600">Publications</h4>
+                                        <p class="text-gray-600 text-sm">2 research papers in international journals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Skills & Expertise -->
+                <div class="space-y-8">
+                    <!-- Technical Skills -->
+                    <div class="bg-white/80 backdrop-blur-lg rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-8">
+                            <div class="p-3 bg-indigo-100 rounded-lg mr-4">
+                                <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Technical Expertise</h3>
+                        </div>
+                        
+                        <!-- Programming Languages -->
+                        <div class="mb-10 transform hover:scale-[1.01] transition-transform duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                                <h4 class="text-lg font-semibold text-indigo-600">Programming Languages</h4>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="font-medium text-indigo-600">C++</span>
+                                        <span class="text-sm font-semibold text-indigo-600">95%</span>
+                                    </div>
+                                    <div class="w-full bg-white rounded-full h-2">
+                                        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-2 rounded-full animate-pulse" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="font-medium text-indigo-600">Python</span>
+                                        <span class="text-sm font-semibold text-indigo-600">90%</span>
+                                    </div>
+                                    <div class="w-full bg-white rounded-full h-2">
+                                        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-2 rounded-full animate-pulse" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Frontend -->
+                        <div class="mb-10 transform hover:scale-[1.01] transition-transform duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                                <h4 class="text-lg font-semibold text-indigo-600">Frontend Development</h4>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                <div class="group relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                                    <div class="relative p-4 bg-white rounded-lg transform hover:-translate-y-1 transition duration-300">
+                                        <div class="flex items-center justify-center">
+                                            <span class="font-medium text-indigo-600">HTML</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                                    <div class="relative p-4 bg-white rounded-lg transform hover:-translate-y-1 transition duration-300">
+                                        <div class="flex items-center justify-center">
+                                            <span class="font-medium text-indigo-600">CSS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                                    <div class="relative p-4 bg-white rounded-lg transform hover:-translate-y-1 transition duration-300">
+                                        <div class="flex items-center justify-center">
+                                            <span class="font-medium text-indigo-600">Tailwind CSS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                                    <div class="relative p-4 bg-white rounded-lg transform hover:-translate-y-1 transition duration-300">
+                                        <div class="flex items-center justify-center">
+                                            <span class="font-medium text-indigo-600">Bootstrap</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                                    <div class="relative p-4 bg-white rounded-lg transform hover:-translate-y-1 transition duration-300">
+                                        <div class="flex items-center justify-center">
+                                            <span class="font-medium text-indigo-600">JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group relative">
+                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                                    <div class="relative p-4 bg-white rounded-lg transform hover:-translate-y-1 transition duration-300">
+                                        <div class="flex items-center justify-center">
+                                            <span class="font-medium text-indigo-600">React.js</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Backend -->
+                        <div class="mb-10 transform hover:scale-[1.01] transition-transform duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                                <h4 class="text-lg font-semibold text-indigo-600">Backend Development</h4>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex flex-col items-center">
+                                        <svg class="w-6 h-6 text-indigo-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                        <span class="font-medium text-indigo-600">Node.js</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex flex-col items-center">
+                                        <svg class="w-6 h-6 text-indigo-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                        <span class="font-medium text-indigo-600">Express.js</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex flex-col items-center">
+                                        <svg class="w-6 h-6 text-indigo-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                        <span class="font-medium text-indigo-600">MongoDB</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex flex-col items-center">
+                                        <svg class="w-6 h-6 text-indigo-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                        <span class="font-medium text-indigo-600">MySQL</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex flex-col items-center">
+                                        <svg class="w-6 h-6 text-indigo-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                        <span class="font-medium text-indigo-600">REST APIs</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex flex-col items-center">
+                                        <svg class="w-6 h-6 text-indigo-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                        <span class="font-medium text-indigo-600"> Authentication </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tools & Technologies -->
+                        <div class="transform hover:scale-[1.01] transition-transform duration-300">
+                            <div class="flex items-center mb-4">
+                                <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                                <h4 class="text-lg font-semibold text-indigo-600">Tools & Technologies</h4>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-lg font-medium border border-indigo-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">Git</span>
+                                <span class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-lg font-medium border border-indigo-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">UI Libraries</span>
+                                <span class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-lg font-medium border border-indigo-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">IDEs/Editors</span>
+                                <span class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-lg font-medium border border-indigo-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">Cloud Platforms</span>
+                                <span class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-lg font-medium border border-indigo-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">MATLAB</span>
+                                <span class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-600 rounded-lg font-medium border border-indigo-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="relative py-20 overflow-hidden bg-gray-50">
+        <!-- SVG Background Pattern -->
+        <div class="absolute inset-0 z-0">
+            <svg class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560">
+                <!-- Background Waves -->
+                <path fill="rgba(99, 102, 241, 0.05)" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,186.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                
+                <!-- Decorative Circles -->
+                <circle cx="200" cy="150" r="50" fill="rgba(99, 102, 241, 0.03)"/>
+                <circle cx="1000" cy="200" r="80" fill="rgba(124, 58, 237, 0.03)"/>
+                <circle cx="500" cy="300" r="40" fill="rgba(99, 102, 241, 0.05)"/>
+                
+                <!-- Grid Pattern -->
+                <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(99, 102, 241, 0.1)" stroke-width="1"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <!-- Content Container -->
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Education Journey</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    My academic qualifications and learning path
+                </p>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="max-w-5xl mx-auto space-y-8">
+                <!-- BTech Education -->
+                <div class="bg-white/90 backdrop-blur-lg rounded-xl p-8 
+                            shadow-[0_8px_30px_rgb(0,0,0,0.12)] 
+                            hover:shadow-[0_20px_40px_rgba(79,70,229,0.15)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1
+                            border border-indigo-50">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- Left Side -->
+                        <div class="md:w-1/4">
+                            <div class="p-4 bg-indigo-50 rounded-lg inline-block mb-6">
+                                <div class="text-indigo-600 font-semibold">2021 - 2025</div>
+                                <div class="text-gray-500">Bachelor's Degree</div>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-gray-700 font-medium">YGPA</span>
+                                        <span class="text-indigo-600 font-bold text-lg">8.16</span>
+                                    </div>
+                                    <div class="w-full bg-white rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-full rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Side -->
+                        <div class="md:w-3/4 space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Bachelor of Technology in Electronics and Communication</h3>
+                                <div class="text-indigo-600 font-medium mb-4">Institute of Engineering and Technology, Lucknow</div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Data Structures</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Microprocessors and Microcontrollers</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Wireless Communication</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Database Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12th Education -->
+                <div class="bg-white/90 backdrop-blur-lg rounded-xl p-8 
+                            shadow-[0_8px_30px_rgb(0,0,0,0.12)] 
+                            hover:shadow-[0_20px_40px_rgba(79,70,229,0.15)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1
+                            border border-indigo-50">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- Left Side -->
+                        <div class="md:w-1/4">
+                            <div class="p-4 bg-indigo-50 rounded-lg inline-block mb-6">
+                                <div class="text-indigo-600 font-semibold">2018 - 2020</div>
+                                <div class="text-gray-500">Intermediate</div>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-gray-700 font-medium">Percentage</span>
+                                        <span class="text-indigo-600 font-bold text-lg">83.6%</span>
+                                    </div>
+                                    <div class="w-full bg-white rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-full rounded-full" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Side -->
+                        <div class="md:w-3/4 space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Intermediate</h3>
+                                <div class="text-indigo-600 font-medium mb-4">SHIV RAM SINGH I C PALHARI ZAIDPUR ROAD BARABANKI</div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Physics</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Chemistry</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Mathematics</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10th Education -->
+                <div class="bg-white/90 backdrop-blur-lg rounded-xl p-8 
+                            shadow-[0_8px_30px_rgb(0,0,0,0.12)] 
+                            hover:shadow-[0_20px_40px_rgba(79,70,229,0.15)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1
+                            border border-indigo-50">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- Left Side -->
+                        <div class="md:w-1/4">
+                            <div class="p-4 bg-indigo-50 rounded-lg inline-block mb-6">
+                                <div class="text-indigo-600 font-semibold">2016 - 2018</div>
+                                <div class="text-gray-500">High School</div>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-gray-700 font-medium">Percentage</span>
+                                        <span class="text-indigo-600 font-bold text-lg">91.16%</span>
+                                    </div>
+                                    <div class="w-full bg-white rounded-full h-2.5">
+                                        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 h-full rounded-full" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Side -->
+                        <div class="md:w-3/4 space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">High School</h3>
+                                <div class="text-indigo-600 font-medium mb-4">SHIV RAM SINGH I C PALHARI ZAIDPUR ROAD BARABANKI</div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Science</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Mathematics</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">English</span>
+                                <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium">Social Studies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Decorative Elements -->
+        <div class="absolute bottom-0 left-0 w-40 h-40 transform -translate-x-1/2 translate-y-1/2">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="rgba(99, 102, 241, 0.05)" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.5,-1.5C87,13.3,81.4,26.7,73.6,38.4C65.8,50.1,55.7,60.2,43.2,67.9C30.7,75.7,15.3,81.1,0.7,80C-13.9,78.9,-27.8,71.3,-41.3,63.5C-54.8,55.7,-67.9,47.7,-77.1,35.4C-86.3,23.2,-91.6,6.7,-89.5,-8.9C-87.4,-24.4,-77.9,-39,-66.6,-50.4C-55.3,-61.8,-42.2,-70,-28.9,-75.9C-15.5,-81.8,-1.9,-85.4,11.9,-84.1C25.7,-82.8,51.4,-76.5,44.7,-76.4Z" transform="translate(100 100)" />
+        </svg>
+    </div>
+    <div class="absolute top-0 right-0 w-40 h-40 transform translate-x-1/2 -translate-y-1/2">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="rgba(124, 58, 237, 0.05)" d="M39.9,-64.1C53.1,-59.5,66.2,-51.7,75.6,-40.2C85,-28.7,90.7,-14.3,89.8,-0.5C88.9,13.3,81.4,26.7,73.6,39.4C65.8,52.1,57.7,64.2,45.7,70.7C33.7,77.2,17.8,78.1,1.6,75.6C-14.6,73.1,-29.2,67.2,-41.9,59.1C-54.6,51,-65.4,40.7,-73.7,27.7C-82,14.7,-87.8,-1,-85.3,-15.4C-82.8,-29.8,-72,-42.9,-59.1,-47.7C-46.2,-52.5,-31.1,-49,-19.3,-58.5C-7.5,-68,3.7,-90.5,14.7,-91.8C25.7,-93.1,51.4,-73.3,39.9,-64.1Z" transform="translate(100 100)" />
+        </svg>
+    </div>
+</section>
+
+    <!-- Coding Profiles Section -->
+    <section id="profiles" class="coding-profiles-pattern py-20 relative overflow-hidden">
+        <!-- Hexagon Pattern Background -->
+        <div class="absolute inset-0 z-0">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+                        <path d="M25 0L50 14.4v28.8L25 43.4L0 43.4V14.4z" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" fill="none"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#hexagons)"/>
+            </svg>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 right-20 opacity-10">
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M60 0L120 30L120 90L60 120L0 90L0 30Z" fill="#ffffff"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-20 left-20 opacity-10">
+            <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 0L80 20L80 60L40 80L0 60L0 20Z" fill="#ffffff"/>
+            </svg>
+        </div>
+
+        <!-- Your existing content with z-index -->
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Keep your existing content here -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Coding Profiles</h2>
+                <p class="text-gray-200 text-lg max-w-2xl mx-auto">Exploring algorithmic challenges across various competitive programming platforms</p>
+            </div>
+
+            <!-- Your existing profile cards grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- LeetCode Card -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="p-6">
+                        <!-- Platform Logo -->
+                        <div class="w-20 h-20 mx-auto mb-6 p-4 bg-indigo-50 rounded-full group-hover:scale-110 transition-transform duration-300">
+                            <img src="images/leetcode.png" alt="LeetCode" class="w-full h-full object-contain">
+                        </div>
+                        
+                        <!-- Platform Name -->
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">LeetCode</h3>
+                        
+                        <!-- Stats -->
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-600">Problems Solved</span>
+                                <span class="font-semibold text-indigo-600">200+</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-600">Contest Rating</span>
+                                <span class="font-semibold text-indigo-600">1513</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-indigo-500 h-full rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Link -->
+                        <a href="https://leetcode.com/u/Archana_1027/" 
+                           target="_blank"
+                           class="group/btn relative inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-xl hover:from-indigo-600 hover:to-indigo-700 transition-all duration-300">
+                            <span class="relative">View Profile</span>
+                            <svg class="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Codeforces Card -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="p-6">
+                        <!-- Platform Logo -->
+                        <div class="w-20 h-20 mx-auto mb-6 p-4 bg-purple-50 rounded-full group-hover:scale-110 transition-transform duration-300">
+                            <img src="images/codeforces.png" alt="Codeforces" class="w-full h-full object-contain">
+                        </div>
+                        
+                        <!-- Platform Name -->
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Codeforces</h3>
+                        
+                        <!-- Stats -->
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-600">Max Rating</span>
+                                <span class="font-semibold text-purple-600">1000+</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-600">Problems Solved</span>
+                                <span class="font-semibold text-purple-600">100+</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-purple-500 h-full rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Link -->
+                        <a href="https://codeforces.com/profile/archana_2710" 
+                           target="_blank"
+                           class="group/btn relative inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all duration-300">
+                            <span class="relative">View Profile</span>
+                            <svg class="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CodeChef Card -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="p-6">
+                        <!-- Platform Logo -->
+                        <div class="w-20 h-20 mx-auto mb-6 p-4 bg-blue-50 rounded-full group-hover:scale-110 transition-transform duration-300">
+                            <img src="images/codechef.png" alt="CodeChef" class="w-full h-full object-contain">
+                        </div>
+                        
+                        <!-- Platform Name -->
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">CodeChef</h3>
+                        
+                        <!-- Stats -->
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-600">Current Rating</span>
+                                <span class="font-semibold text-blue-600">1400+</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-600">Problems Solved</span>
+                                <span class="font-semibold text-blue-600">100+</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-blue-500 h-full rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Link -->
+                        <a href="https://www.codechef.com/users/archana2016" 
+                           target="_blank"
+                           class="group/btn relative inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
+                            <span class="relative">View Profile</span>
+                            <svg class="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GeeksforGeeks Card -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="p-6">
+                        <!-- Platform Logo -->
+                        <div class="w-20 h-20 mx-auto mb-6 p-4 bg-violet-50 rounded-full group-hover:scale-110 transition-transform duration-300">
+                            <img src="images/gfg.png" alt="GeeksforGeeks" class="w-full h-full object-contain">
+                        </div>
+                        
+                        <!-- Platform Name -->
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">GeeksforGeeks</h3>
+                        
+                        <!-- Stats -->
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-600">Institute Rank</span>
+                                <span class="font-semibold text-violet-600">Top 5%</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-600">Problems Solved</span>
+                                <span class="font-semibold text-violet-600">100+</span>
+                            </div>
+                            <div class="w-full bg-gray-100 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-violet-500 h-full rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Link -->
+                        <a href="https://www.geeksforgeeks.org/user/archana_2710/" 
+                           target="_blank"
+                           class="group/btn relative inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-violet-500 to-violet-600 text-white rounded-xl hover:from-violet-600 hover:to-violet-700 transition-all duration-300">
+                            <span class="relative">View Profile</span>
+                            <svg class="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-pattern relative py-20 overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Title and Filter Buttons -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">My Projects</h2>
+                <!-- Filter Buttons -->
+                <div class="flex justify-center gap-4 mt-6">
+                    <button 
+                        class="filter-btn px-4 py-2 rounded-lg bg-white border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors duration-300 active" 
+                        data-filter="all">
+                        All Projects
+                    </button>
+                    <button 
+                        class="filter-btn px-4 py-2 rounded-lg bg-white border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors duration-300" 
+                        data-filter="frontend">
+                        Frontend
+                    </button>
+                    <button 
+                        class="filter-btn px-4 py-2 rounded-lg bg-white border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors duration-300" 
+                        data-filter="fullstack">
+                        Full Stack
+                    </button>
+                    <button 
+                        class="filter-btn px-4 py-2 rounded-lg bg-white border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors duration-300" 
+                        data-filter="ml">
+                        Machine Learning
+                    </button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(59,130,246,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(59,130,246,0.3),0_0_25px_rgba(37,99,235,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="frontend">
+                    <div class="relative">
+                        <img src="images/myPortfolio.png" alt="portfolio-template" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <!-- <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Featured</span> -->
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Portfolio Template</h3>
+                        <p class="text-gray-600 mb-4">A responsive portfolio website featuring interactive animations, custom styling, and integration with competitive programming profiles.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">CSS</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Bootstrap</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://2016archana.github.io/myPortfolio/" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                Live Demo
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/2016archana/myPortfolio" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(59,130,246,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(59,130,246,0.3),0_0_25px_rgba(37,99,235,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="frontend">
+                    <div class="relative">
+                        <img src="images/weather_p1.png" alt="react-weather-app" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">React-Weather-App</h3>
+                        <p class="text-gray-600 mb-4">A dynamic weather application built with React, featuring real-time weather updates, location-based forecasts, and interactive temperature visualizations.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">React 18</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Vite</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Material-UI</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">OpenWeather API</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                Live Demo
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/2016archana/React-Weather-Project" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(59,130,246,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(59,130,246,0.3),0_0_25px_rgba(37,99,235,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="frontend">
+                    <div class="relative">
+                        <img src="task-app.jpg" alt="Task Management App" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Task Management App</h3>
+                        <p class="text-gray-600 mb-4">A collaborative task management platform with real-time updates and team features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Vue.js</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">Firebase</span>
+                            <span class="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm">Tailwind</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                Live Demo
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Stack Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(147,51,234,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(147,51,234,0.3),0_0_25px_rgba(126,34,206,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="fullstack">
+                    <div class="relative">
+                        <img src="weather-app.jpg" alt="Weather Application" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Weather Dashboard</h3>
+                        <p class="text-gray-600 mb-4">A weather forecast application with location tracking and detailed weather metrics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Weather API</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">SCSS</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                Live Demo
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Stack Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(147,51,234,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(147,51,234,0.3),0_0_25px_rgba(126,34,206,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="fullstack">
+                    <div class="relative">
+                        <img src="blog-platform.jpg" alt="Blog Platform" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Blog Platform</h3>
+                        <p class="text-gray-600 mb-4">A full-featured blog platform with markdown support and comment system.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Next.js</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">GraphQL</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Prisma</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                Live Demo
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Stack Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(147,51,234,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(147,51,234,0.3),0_0_25px_rgba(126,34,206,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="fullstack">
+                    <div class="relative">
+                        <img src="portfolio-template.jpg" alt="Portfolio Template" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Portfolio Template</h3>
+                        <p class="text-gray-600 mb-4">A customizable portfolio template with dark mode and animations.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Tailwind</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Framer</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                Live Demo
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(16,185,129,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(16,185,129,0.3),0_0_25px_rgba(5,150,105,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="ml">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                             alt="AI Project" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">ML</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sentiment Analysis AI</h3>
+                        <p class="text-gray-600 mb-4">A machine learning model that analyzes sentiment in text using Natural Language Processing.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">TensorFlow</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">NLP</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                View Project
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(16,185,129,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(16,185,129,0.3),0_0_25px_rgba(5,150,105,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="ml">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1555952494-efd681c7e3f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Computer Vision Project" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">ML</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Object Detection System</h3>
+                        <p class="text-gray-600 mb-4">Real-time object detection using YOLO and OpenCV for video surveillance and security applications.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">OpenCV</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">PyTorch</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">YOLO</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                View Project
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden
+                            shadow-[0_0_15px_rgba(16,185,129,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(16,185,129,0.3),0_0_25px_rgba(5,150,105,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-2" 
+                         data-category="ml">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Predictive Analytics Project" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">ML</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Stock Price Predictor</h3>
+                        <p class="text-gray-600 mb-4">Time series forecasting model using LSTM networks to predict stock market trends and prices.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Keras</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Scikit-learn</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">LSTM</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                                View Project
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-pattern py-20">
+        <div class="container mx-auto px-6">
+            <!-- Updated Section Header to match other sections -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Certifications</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Professional certifications and achievements in technology
+                </p>
+            </div>
+
+            <!-- Rest of the certifications grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AWS Certification Card -->
+                <div class="bg-gray-50 rounded-xl p-6 
+                            shadow-[0_0_15px_rgba(79,70,229,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(139,92,246,0.3),0_0_25px_rgba(99,102,241,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <img src="images/Cousera.png" alt="AWS" class="h-12">
+                        <span class="text-sm text-gray-500">Issued: Mar 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Supervised Machine Learning: Regression and Classification</h3>
+                    <p class="text-gray-600 mb-4">Course on Supervised Machine Learning from Coursera, part of the Machine Learning Specialization by Stanford University</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Supervised Learning</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Regression & Classification</span>
+                    </div>
+                    <!-- <div class="flex justify-between items-center">
+                        <span class="text-sm text-blue-600">Credential ID: AWS-123456</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                            Verify
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div> -->
+                </div>
+
+                <!-- Meta Frontend Certification -->
+                <div class="bg-gray-50 rounded-xl p-6 
+                            shadow-[0_0_15px_rgba(79,70,229,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(139,92,246,0.3),0_0_25px_rgba(99,102,241,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <img src="images/Cousera.png" alt="Meta" class="h-12">
+                        <span class="text-sm text-gray-500">Issued: Feb 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Advanced Learning Algorithms</h3>
+                    <p class="text-gray-600 mb-4">Course on Advanced Learning Algorithms from Coursera, part of the Machine Learning Specialization by Stanford University</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Advanced Algorithms</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Neural Networks</span>
+                    </div>
+                    <!-- <div class="flex justify-between items-center">
+                        <span class="text-sm text-blue-600">Credential ID: META-789012</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                            Verify
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div> -->
+                </div>
+
+                <!-- Google Data Analytics -->
+                <div class="bg-gray-50 rounded-xl p-6 
+                            shadow-[0_0_15px_rgba(79,70,229,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(139,92,246,0.3),0_0_25px_rgba(99,102,241,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <img src="images/Cousera.png" alt="Google" class="h-12">
+                        <span class="text-sm text-gray-500">Issued: Jan 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Unsupervised Learning, Recommenders, Reinforcement Learning</h3>
+                    <p class="text-gray-600 mb-4">Course on Unsupervised Learning and Reinforcement Learning from Coursera, part of the Machine Learning Specialization by Stanford University</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Unsupervised Learning</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Recommender Systems</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Reinforcement Learning</span>
+                    </div>
+                    <!-- <div class="flex justify-between items-center">
+                        <span class="text-sm text-blue-600">Credential ID: GOOGLE-345678</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                            Verify
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div> -->
+                </div>
+
+                <!-- MongoDB Certification -->
+                <div class="bg-gray-50 rounded-xl p-6 
+                            shadow-[0_0_15px_rgba(79,70,229,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(139,92,246,0.3),0_0_25px_rgba(99,102,241,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <img src="mongodb-logo.png" alt="MongoDB" class="h-12">
+                        <span class="text-sm text-gray-500">Issued: Dec 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">MongoDB Developer</h3>
+                    <p class="text-gray-600 mb-4">MongoDB Certified Developer Associate</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">NoSQL</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">Database</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-blue-600">Credential ID: MONGO-901234</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                            Verify
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Microsoft Azure -->
+                <div class="bg-gray-50 rounded-xl p-6 
+                            shadow-[0_0_15px_rgba(79,70,229,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(139,92,246,0.3),0_0_25px_rgba(99,102,241,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <img src="images/Cousera.png" alt="University of Michigan" class="h-12">
+                        <span class="text-sm text-gray-500">Issued: May 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Python Programming </h3>
+                    <p class="text-gray-600 mb-4">Coursera Verified: Programming for Everybody (Getting Started with Python).</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Python</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <!-- <span class="text-sm text-blue-600">Credential ID: AZURE-567890</span> -->
+                        <a href="https://coursera.org/share/9069eadf8314cc1383ee4afd312da4cc" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                            Verify
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cisco Networking -->
+                <div class="bg-gray-50 rounded-xl p-6 
+                            shadow-[0_0_15px_rgba(79,70,229,0.1)] 
+                            hover:shadow-[0_20px_50px_rgba(139,92,246,0.3),0_0_25px_rgba(99,102,241,0.2)] 
+                            transition-all duration-300 
+                            hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <img src="images/Internshala.png" alt="Internshala" class="h-12">
+                        <span class="text-sm text-gray-500">Issued: Feb 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Data Science Certification</h3>
+                    <p class="text-gray-600 mb-4">Awarded a Professional Certificate in Data Science upon successful completion of a 6-week intensive program.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Python Programming for Data Science</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Statistical Analysis</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Predictive Modeling</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Foundations of Machine Learning</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-blue-600">Credential ID: 8lkvssnrpjp</span>
+                        <a href="https://drive.google.com/file/d/1rAZgXBjbAtDeaBvaKGYewKpmbshZjXAp/view?usp=sharing" class="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-2">
+                            Verify
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <!-- Subtle Background SVG Pattern -->
+        <div class="absolute inset-0 z-0">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="experience-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M0 0h40v40H0z" fill="none"/>
+                        <circle cx="20" cy="20" r="1" fill="#818cf8" fill-opacity="0.1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#experience-grid)"/>
+            </svg>
+        </div>
+
+        <!-- Floating Shapes -->
+        <div class="absolute top-10 right-10 opacity-10">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="40" r="40" fill="#818cf8"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-10 left-10 opacity-10">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <rect width="60" height="60" fill="#818cf8"/>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Work Experience</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    My professional journey in software development
+                </p>
+            </div>
+
+            <!-- Experience Timeline -->
+            <!-- <div class="max-w-4xl mx-auto">
+                <! Experience Item 1 -->
+                <!-- <div class="relative pl-8 sm:pl-32 py-6 group"> -->
+                    <!-- Timeline line -->
+                    <!-- <div class="absolute left-0 sm:left-0 h-full w-[2px] bg-indigo-200 group-last:h-6"></div> -->
+                    <!-- Timeline dot -->
+                    <!-- <div class="absolute left-[-5px] sm:left-[-5px] h-3 w-3 bg-indigo-600 rounded-full mt-2"></div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
+                        <div class="flex flex-col sm:flex-row justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Senior Software Engineer</h3>
+                            <time class="text-sm text-indigo-600 font-semibold">2022 - Present</time>
+                        </div>
+                        <h4 class="text-lg text-indigo-600 mb-2">Tech Company Name</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Led development of microservices architecture using Node.js and Docker</li>
+                            <li>Implemented CI/CD pipelines reducing deployment time by 40%</li>
+                            <li>Mentored junior developers and conducted code reviews</li>
+                        </ul>
+                    </div> -->
+                <!-- </div> --> 
+
+                <!-- Experience Item 2 -->
+                <div class="relative pl-8 sm:pl-32 py-6 group">
+                    <div class="absolute left-0 sm:left-0 h-full w-[2px] bg-indigo-200 group-last:h-6"></div>
+                    <div class="absolute left-[-5px] sm:left-[-5px] h-3 w-3 bg-indigo-600 rounded-full mt-2"></div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
+                        <div class="flex flex-col sm:flex-row justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Full Stack Developer</h3>
+                            <time class="text-sm text-indigo-600 font-semibold">Oct-Nov, 2024</time>
+                        </div>
+                        <h4 class="text-lg text-indigo-600 mb-2">Internpe</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Developed and maintained multiple React-based web applications</li>
+                            <!-- <li>Optimized database queries improving application performance by 30%</li>
+                            <li>Collaborated with UX team to implement responsive designs</li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="relative pl-8 sm:pl-32 py-6 group">
+                    <div class="absolute left-0 sm:left-0 h-full w-[2px] bg-indigo-200 group-last:h-6"></div>
+                    <div class="absolute left-[-5px] sm:left-[-5px] h-3 w-3 bg-indigo-600 rounded-full mt-2"></div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
+                        <div class="flex flex-col sm:flex-row justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Full Stack Developer</h3>
+                            <time class="text-sm text-indigo-600 font-semibold">Oct-Nov, 2023</time>
+                        </div>
+                        <h4 class="text-lg text-indigo-600 mb-2">DryCode</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Built and maintained RESTful APIs using Node.js and Express</li>
+                            <li>Implemented user authentication and authorization systems</li>
+                            <!-- <li>Participated in daily stand-ups and sprint planning meetings</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-indigo-600 to-purple-600">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-gray-200 text-lg">Let's discuss how I can contribute to your next project!</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <!-- Quick Contact Cards -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-white">
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <div class="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
+                                <div class="bg-white/20 p-3 rounded-full">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Email</h3>
+                                    <p class="text-gray-200">girishchand724@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
+                                <div class="bg-white/20 p-3 rounded-full">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Location</h3>
+                                    <p class="text-gray-200">Lucknow, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                        <h3 class="text-white font-semibold mb-4">Connect With Me</h3>
+                        <div class="flex space-x-4">
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/in/archana-patel-a9732523b" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors duration-300">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://github.com/2016archana" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors duration-300">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <form class="space-y-6" onsubmit="return false;">
+                        <!-- Name Input -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="name">
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition-colors duration-300"
+                                placeholder="John Doe"
+                                required
+                            >
+                        </div>
+
+                        <!-- Email Input -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="email">
+                                Email Address
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition-colors duration-300"
+                                placeholder="john@example.com"
+                                required
+                            >
+                        </div>
+
+                        <!-- Subject Input -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="subject">
+                                Subject
+                            </label>
+                            <input
+                                type="text"
+                                id="subject"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition-colors duration-300"
+                                placeholder="Project Inquiry"
+                                required
+                            >
+                        </div>
+
+                        <!-- Message Input -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="message">
+                                Message
+                            </label>
+                            <textarea
+                                id="message"
+                                rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition-colors duration-300"
+                                placeholder="Your message here..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center space-x-2"
+                        >
+                            <span>Send Message</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m-7-7H3"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Archana Patel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <div class="fixed top-0 left-0 w-full h-1 z-50">
+        <div id="scrollProgress" class="h-full bg-indigo-600 transition-all duration-150"></div>
+    </div>
+</body>
+</html>
